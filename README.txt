@@ -4,7 +4,7 @@
 = = = = = = = = = = = = = =
 使用方法
 
-./a.sh 
+./checkIP.sh 
 
 就可以執行，它會自己去讀 host1.txt
 如果遇到不能 ping 的，會將 IP 寫在 failIP.txt 裡面
