@@ -1,8 +1,6 @@
 #!/bin/bash
 
 IPFile=host1.txt
-echo "Do you want use host1.txt?"
-
 
 cat $IPFile | while read line
 do
