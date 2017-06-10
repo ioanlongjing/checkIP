@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IPFile=host1.txt
+IPFile=all.txt
 
 cat $IPFile | while read line
 do
@@ -15,3 +15,11 @@ do
 		cat failIP.txt 
 	fi
 done
+
+# 把 ban ping 不到的 IP ( failIP.txt) 從 host1.txt 裡刪除導出成 
+
+grep -v -f <(sed "s/\(.\+\)/^\1$/" failIP.txt) all.txt > filterIP.txt
+# 或是這樣也可以
+# comm -23 <(sort all.txt | uniq) <(sort known.txt)
+
+
