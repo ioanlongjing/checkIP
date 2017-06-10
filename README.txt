@@ -6,8 +6,10 @@
 
 ./checkIP.sh 
 
-就可以執行，它會自己去讀 host1.txt
+就可以執行，它會自己去讀 all.txt
 如果遇到不能 ping 的，會將 IP 寫在 failIP.txt 裡面
 
-使用環境：Mac 上的 bash
-其他的地方還沒 try 過
+並將不能 ping 的 IP 從 all 裡去掉, 輸出成 filter.txt
+
+使用環境：Bash ( Mac , Linux - Ubuntu )
+其他的環境可能可以, 但要試看看
